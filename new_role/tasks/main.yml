@@ -1,0 +1,16 @@
+---
+# tasks file for new_role
+- name: install httpd
+  yum:
+    name: httpd
+    state: installed
+
+- name: copying file
+  copy:
+    name: newfile
+    src: /home/ansadmin
+    dest: /home/ansadmin/
+    mode: 0777  
+ 
+
+

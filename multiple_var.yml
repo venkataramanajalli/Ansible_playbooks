@@ -1,0 +1,10 @@
+---
+- name: test playbook
+  hosts: all
+  become: true
+  vars:
+    user: modi
+  tasks:
+  - name: india ka pm {{user}}
+    user:
+     name: "{{user}}"

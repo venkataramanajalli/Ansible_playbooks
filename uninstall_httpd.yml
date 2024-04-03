@@ -1,0 +1,13 @@
+---
+- name: my test playbook
+  hosts: all
+  become: true
+  tasks:
+    - name: stpping httpd service
+      service:
+        name: httpd
+        state: stopped
+    - name: uninstalling httpd 
+      yum:
+        name: httpd
+        state: removed 
